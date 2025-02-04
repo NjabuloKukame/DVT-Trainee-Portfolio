@@ -20,19 +20,19 @@ function Header(){
                         <img src={homeIcon} alt="Home Icon"  className="icon home-icon"/>
                     </Link>
 
-                    <Link to="/" className="nav-link">
+                    <Link to="/login" className="nav-link">
                         Login
                     </Link>
 
-                    <Link to="/" className="nav-link">
+                    <Link to="/portfolio" className="nav-link">
                         Portfolio
                     </Link>
 
-                    <Link to="/" className="nav-link">
+                    <Link to="/about" className="nav-link">
                         About
                     </Link>
 
-                    <Link to="/" className="nav-link">
+                    <Link to="/search" className="nav-link">
                         Search
                     </Link>
                

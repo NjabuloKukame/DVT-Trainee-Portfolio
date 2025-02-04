@@ -1,6 +1,7 @@
 import './styles.css';
 import './Search.css';
 import Header from './components/Header';
+import Filter from './components/Filter';
 
 function Search(){
     return(
@@ -9,6 +10,7 @@ function Search(){
             <div>
                 <h1>Search</h1>
             </div>
+            <Filter/>
         </>
         
     );

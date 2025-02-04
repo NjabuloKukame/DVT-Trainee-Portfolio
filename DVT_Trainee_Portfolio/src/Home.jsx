@@ -1,8 +1,12 @@
 import './styles.css'
+import Header from './components/Header';
 
 function Home(){
     return(
-        <h1>Hello</h1>
+        <>
+            <Header/>
+        </>
+        
     )
 }
 

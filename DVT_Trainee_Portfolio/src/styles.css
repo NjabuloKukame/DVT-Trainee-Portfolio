@@ -15,6 +15,7 @@
     --black: #000000;
 }
 
+/* Don't Change anything here */
 body{
     background: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     font-family: "Inter", "Arial";

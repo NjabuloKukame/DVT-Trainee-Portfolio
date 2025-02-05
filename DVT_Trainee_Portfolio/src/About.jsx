@@ -41,7 +41,7 @@ function About(){
                         <p>Tshenolo</p>
                         <p>Dylan</p>
 
-                        <h3><span className='yellow-text'>Team</span> Picture 1</h3>
+                        <h3><span className='yellow-text'>Team</span> Picture 2</h3>
                     </div>
                    
                 </div>

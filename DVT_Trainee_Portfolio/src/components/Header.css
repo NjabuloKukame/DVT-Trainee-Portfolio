@@ -79,3 +79,7 @@
     cursor: pointer;
     margin-top: 5px;
 }
+
+.menu:hover{
+    background-color: var(--yellow);
+}

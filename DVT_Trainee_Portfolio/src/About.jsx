@@ -64,6 +64,7 @@ function About(){
                     <h1>The Team Through our <br /> Manager's Eyes</h1>
                 </div>
             </section>
+
         </>
     );
 }

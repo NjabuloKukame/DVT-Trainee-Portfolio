@@ -48,7 +48,7 @@
 .team-members p{
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: 9.5%;
 }
 
 .team-members{
@@ -58,6 +58,7 @@
 .team-members h3{
     font-size: 35px;
     border-top: 2px solid var(--white);
+    margin-top: 10px;
 }
 
 .team-members p:nth-of-type(2n):not(:first-of-type){

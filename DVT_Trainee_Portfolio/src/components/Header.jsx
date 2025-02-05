@@ -13,31 +13,28 @@ function Header(){
                 <div className='logo-text'>Development <br /> <span className='yellow-text'>Trainee</span></div>
             </div>
 
-            <nav  className="navbar">
+            <nav className="navbar">
+                <Link to="/" className={`nav-link ${location.pathname === "/" ? "active" : ""}`}>
+                    <img src={homeIcon} alt="Home Icon" className="icon home-icon" />
+                </Link>
 
-              
-                    <Link to="/" className="nav-link">
-                        <img src={homeIcon} alt="Home Icon"  className="icon home-icon"/>
-                    </Link>
+                <Link to="/login" className={`nav-link ${location.pathname === "/login" ? "active" : ""}`}>
+                    Login
+                </Link>
 
-                    <Link to="/login" className="nav-link">
-                        Login
-                    </Link>
+                <Link to="/portfolio" className={`nav-link ${location.pathname === "/portfolio" ? "active" : ""}`}>
+                    Portfolio
+                </Link>
 
-                    <Link to="/portfolio" className="nav-link">
-                        Portfolio
-                    </Link>
+                <Link to="/about" className={`nav-link ${location.pathname === "/about" ? "active" : ""}`}>
+                    About
+                </Link>
 
-                    <Link to="/about" className="nav-link">
-                        About
-                    </Link>
-
-                    <Link to="/search" className="nav-link">
-                        Search
-                    </Link>
-               
-  
+                <Link to="/search" className={`nav-link ${location.pathname === "/search" ? "active" : ""}`}>
+                    Search
+                </Link>
             </nav>
+
 
             <div className="menu">
                 <img src={menuIcon} alt="Menu Icon" className="icon"/>

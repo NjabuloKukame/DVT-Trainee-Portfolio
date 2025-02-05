@@ -59,6 +59,13 @@
     color: var(--white);
 }
 
+.nav-link.active {
+    background-color: var(--purple);
+    color: var(--white);
+    border-radius: 25px;
+}
+
+
 .icon{
     height: 20px;
     width: 20px;

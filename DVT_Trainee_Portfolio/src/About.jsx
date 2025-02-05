@@ -1,6 +1,8 @@
+import React, {useState, useEffect} from 'react';
 import './styles.css';
 import './About.css';
 import Header from './components/Header';
+import Card from './components/Card';
 import placeHolder from "./assets/placeholder.png";
 
 function About(){
@@ -63,6 +65,7 @@ function About(){
                 <div className='about-us'>
                     <h1>The Team Through our <br /> Manager's Eyes</h1>
                 </div>
+                
             </section>
 
         </>

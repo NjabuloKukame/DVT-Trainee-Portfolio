@@ -13,7 +13,7 @@
     margin-top: 25px;
     border-bottom: 1px solid white;
 }
-input[type="text"]{
+.input-container input[type="text"]{
     color: wheat;
     width: 90%;
     padding: 10px;
@@ -27,10 +27,10 @@ input[type="text"]{
     height: 20%;
 
 }
-input[type="text"]::placeholder{
+.input-container input[type="text"]::placeholder{
     color: grey;
 }
-input{
+.input-container input{
     width: 30%;
     height: 30%;
 }

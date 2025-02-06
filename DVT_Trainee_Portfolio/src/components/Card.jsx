@@ -1,13 +1,13 @@
 import './Card.css';
+import React from "react";
 
-function Card({name, description, image}) {
-    return(
-        <div className='card'>
-            <img src={image} alt="Profile Picture" className='profile-pic'/>
-            <div className='card-content'>
-                <h3 className='name'>{name}</h3>
-                <p className='description'>{description}</p>
-
+const Card = ({ name, description, image }) => {
+    return (
+        <div className="card">
+            <img src={image} alt="Picture" className="profile-pic" />
+            <div className="card-content">
+                <h3 className="name"><u>{name}</u></h3>
+                <p className="description">"{description}"</p>
             </div>
         </div>
     );

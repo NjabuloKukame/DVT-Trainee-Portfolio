@@ -1,13 +1,16 @@
 import './styles.css';
 import './Search.css';
 import Header from './components/Header';
-import {projects, employees} from './MockSearch.json'
-import SearchResults from './components/SearchResults.jsx'
+import Filter from './components/Filter';
+
 function Search(){
     return(
         <>
             <Header/>
-            <SearchResults employees={employees} projects={projects} />
+            <div>
+                <h1>Search</h1>
+            </div>
+            <Filter/>
         </>
         
     );

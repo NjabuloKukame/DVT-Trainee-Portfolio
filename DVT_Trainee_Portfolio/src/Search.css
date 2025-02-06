@@ -1,0 +1,12 @@
+.r-container-filter{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  justify-self: center;
+  margin: 2em;
+
+}
+
+.filter-bar{
+  margin-right: 2em;
+  background-color: black;
+}

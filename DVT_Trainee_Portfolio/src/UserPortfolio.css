@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
-    margin: 3rem;
+    margin: 5rem;
     margin-left: 10%;
     margin-bottom: 20px;
     justify-content: center;
@@ -13,78 +13,86 @@
 
 }
 
-
-.profile-header {
+.pop  {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center; 
     gap: 20px; 
+}
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
 }
 
 
 .profile-img {
+    margin-top: 20px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #0056b3;
 }
 
 
-.user-info h1 {
+.user-name-section h1 {
     margin: 0;
     font-size: 24px;
 }
 
-.user-info h3 {
-    margin: 0;
+.user-position h3 {
+    margin: 25px;
     font-size: 18px;
-    color: white;
+    color: #FFE500;
 }
 
 
 .about-section {
     display: flex;
+    flex-direction: column;
     background-color: white;
     margin-top: 20px;
     gap: 5px;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     width: 685px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .about-section p{
-    color: #0056b3;
+    color: #2b5876;
 }
 
 
 .technology-stack-section ul {
-    list-style-type: none;
-    padding: 0;
-    background-color: bisque;
-    height: 80%;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
+    list-style-type:circle;
+    padding: 50px;
+    margin: 1.5rem 3rem 0 -2rem;
+    background-color: white;
+    height: 95%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .technology-section{
     display: flex;
+    grid-template-rows: 30% 70%;
     flex-direction: row;
     gap: 2rem;
     margin: 3rem;
     height: 25rem;
-    width: 87%;
-    background-color: chocolate;
+    width: 87.9%;
     justify-content: center;
     align-content: center;
 }
 
 .technology-stack-section li {
     margin: 5px 0;
+    color: #2b5876;
 }
 
 .technology-stack-section {
-    width: 30%;
+    width: 20%;
+    margin-right: 5.79%;
 }
 
 .cv-btn button {
@@ -92,7 +100,7 @@
     background-color: #007bff;
     color: white;
     margin-bottom: 20px;
-    margin-left: 46px;
+    margin-left: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -103,32 +111,45 @@
 }
 
 .project-grid-section {
-    background-color: brown;
-    height: 80%;
-    width: 50%;
+    height: auto; 
+    width: 80%; 
     margin-bottom: 1rem;
-    margin-top: 2.5rem;
+    margin-top: 0.1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    align-items: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.project-section h2{
+    margin: 0;
+    align-self: center;
+    font-size: 24px;
+    color: #2b5876;
+}
+
+.project-section{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-top: 20px;
+    gap: 5px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .project {
-    width: 40%;
-    height: 40%;
-    background-color: black;
-}
-
-/* .about-section{
-    color: black;
+    width: 40%; 
+    height: 140px; 
     display: flex;
-    justify-content: center;
-    margin-right: calc(20% - 50px);
-    margin-top: 3%;
-    width: 50%;
-    flex-direction:column;
-    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
     border-radius: 1.5rem;
-} */
+    background-color: #FFE500;
+}

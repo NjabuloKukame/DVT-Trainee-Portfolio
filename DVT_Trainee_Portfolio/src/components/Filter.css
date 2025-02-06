@@ -1,14 +1,16 @@
-p {
-    padding: 0;
-    margin: 0;
-}
+
 
 .filter-container{
-    max-width: 240px;
+    /* max-width: 240px; */
     background-color: rgba(240, 248, 255, 0.408);
-    height: 75vh;
-    padding-inline: 1em;
-    border-radius: 8px;
+    /* height: 75vh; */
+    height: fit-content;
+    /* padding-inline: 1em; */
+    border-radius: .5em;
+    padding: 1em;
+    margin-right: 1.5em;
+
+
 }
 
 .filter-title{
@@ -24,6 +26,16 @@ p {
     margin-top: 1em;
 }
 
+.scroller{
+    max-height: 55vh;
+    overflow-y: scroll;
+}
+
+.scroller::-webkit-scrollbar{
+    display: none;
+} 
+
+
 .filter-section-title{
     font-size: 1em;
     margin-bottom: .3em;
@@ -32,7 +44,7 @@ p {
 }
 
 .filter-content-name{
-    font-size: .8em;
+    font-size: .875em;
 }
 
 .filter-content-circle{

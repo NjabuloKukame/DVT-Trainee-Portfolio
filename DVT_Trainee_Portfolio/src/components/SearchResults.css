@@ -1,19 +1,5 @@
-* {
-  padding: 0;
-  margin: 0;
-  text-align: start;
-}
 
-p{
-  padding: 0;
-  margin: 0;
-  font-size: 1em;
-}
 
-h2{
-  padding: 0;
-  margin: 0;
-}
 
 .result-nav {
   display: flex;
@@ -24,7 +10,7 @@ h2{
 .result-nav-btn {
   background-color: transparent;
   font-weight: 600;
-  color: black;
+  color: var(--white);
   outline: none;
   border: none;
   font-size: 1em;
@@ -35,7 +21,7 @@ h2{
     color: var(--blue)
   }
   &:focus{
-    color: var(--blue);
+    color: var(--white);
     text-decoration-line: underline;
     text-decoration-color: var(--yellow);
     text-decoration-thickness: .2em;
@@ -45,9 +31,9 @@ h2{
 }
 
 .result-nav-btns {
-  background-color: white;
+  /* background-color: white; */
   border-radius: 2em;
-  padding: .8em 2.5em;
+  padding: .8em 0em;
   display: flex;
   gap: 1.5em;
 }
@@ -62,6 +48,8 @@ h2{
 
 .sort-btn {
   color: white;
+  display: flex;
+  align-items: center;
 }
 
 .sort-btn-icon {
@@ -72,7 +60,7 @@ h2{
 
 .results {
   display: flex;
-  gap: 3em;
+  gap: 2em;
   background-color: #D9D9D9;
   color: black;
   align-items: center;
@@ -120,15 +108,11 @@ h2{
 
 .results-container{
   background-color: #D1D1D180;
-  width: 70%;
   padding: 2em;
-  margin: 2em;
-  border-radius: 1em;
+  border-radius: .5em;
   display: flex;
   flex-direction: column;
-  gap: 2em;
-  justify-self: center;
-
+  gap: 1em;
 }
 
 .results-container > ul{

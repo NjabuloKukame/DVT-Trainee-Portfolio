@@ -1,24 +1,28 @@
 .input-container{
-    width:20% ;
+    width:35% ;
     display: flex;
     align-items: center;
     justify-self: center;
     padding: 0px 20px;
-    border: 1px solid white;
-    border-radius: 30px;
-    background-color: white;
+    /* border: 1px solid white; */
+    /* border-radius: 30px; */
+    background-color: transparent;
+    /* border-top: 0px;
+    border-left: 0px; */
     margin-left: 140px;
     margin-top: 25px;
+    border-bottom: 1px solid white;
 }
 input[type="text"]{
+    color: wheat;
     width: 90%;
     padding: 10px;
     margin-right: 10px;
     border: none;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 20px;
     background-color: transparent;
-    color: black;
+    color: white;
     outline: none;
     height: 20%;
 

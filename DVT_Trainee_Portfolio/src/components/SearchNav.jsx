@@ -1,4 +1,5 @@
 import sort from '../assets/icons8-sort-100 (1).png'
+import SwapVertIcon from '@mui/icons-material/SwapVert';
 
 export default function SearchNav() {
   return (
@@ -11,7 +12,7 @@ export default function SearchNav() {
       <div>
         <button className="result-nav-btn sort-btn">
           <span className="sort-txt">Sort</span>
-          <img src={sort} alt="" className="sort-btn-icon"/>
+          <SwapVertIcon/>
         </button>
       </div>
     </div>

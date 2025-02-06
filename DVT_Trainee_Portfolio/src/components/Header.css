@@ -1,0 +1,90 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: space-around;
+    top: 0;
+    padding: 35px 50px;
+    gap: 10%;
+}
+
+.logo{
+    display: flex;
+    gap: 10px;
+}
+
+.logo-text{
+    background: transparent;
+    font-size: 20px;
+    align-items: center;
+}
+
+.yellow-text{
+    color: var(--yellow);
+}
+
+.logo img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: block;
+    object-fit: fill;
+}
+
+
+.navbar {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    width: 40%; 
+    margin-inline: 1%;
+}
+  
+.nav-link {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--blue); 
+    border-radius: 25px;
+    color: var(--white);
+}
+
+.nav-link.active {
+    background-color: var(--purple);
+    color: var(--white);
+    border-radius: 25px;
+}
+
+.icon{
+    height: 20px;
+    width: 20px;
+}
+
+.home-icon{
+    margin-top: 5px;
+}
+
+.menu{
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.menu:hover{
+    background-color: var(--yellow);
+}

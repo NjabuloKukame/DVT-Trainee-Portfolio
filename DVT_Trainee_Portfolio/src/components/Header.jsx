@@ -1,0 +1,46 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import './Header.css'
+import dvtLogo from "../assets/dvt_logo.jpg";
+import homeIcon from "../assets/icons8-home-100.png";
+import menuIcon from "../assets/icons8-menu-100.png";
+
+function Header(){
+    return(
+        <header className='header'>
+            <div className='logo'>
+                <img src={dvtLogo} alt="Logo" />
+                <div className='logo-text'>Development <br /> <span className='yellow-text'>Trainee</span></div>
+            </div>
+
+            <nav className="navbar">
+                <Link to="/" className={`nav-link ${location.pathname === "/" ? "active" : ""}`}>
+                    <img src={homeIcon} alt="Home Icon" className="icon home-icon" />
+                </Link>
+
+                <Link to="/login" className={`nav-link ${location.pathname === "/login" ? "active" : ""}`}>
+                    Login
+                </Link>
+
+                <Link to="/portfolio" className={`nav-link ${location.pathname === "/portfolio" ? "active" : ""}`}>
+                    Portfolio
+                </Link>
+
+                <Link to="/about" className={`nav-link ${location.pathname === "/about" ? "active" : ""}`}>
+                    About
+                </Link>
+
+                <Link to="/search" className={`nav-link ${location.pathname === "/search" ? "active" : ""}`}>
+                    Search
+                </Link>
+            </nav>
+
+
+            <div className="menu">
+                <img src={menuIcon} alt="Menu Icon" className="icon"/>
+            </div>
+        </header>
+    );
+}
+
+export default Header;

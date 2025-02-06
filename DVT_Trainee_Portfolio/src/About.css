@@ -92,4 +92,13 @@
 
 .about-us h1{
     text-align: center;
+    margin-bottom: 20%;
 }
+
+.about-us, .people-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

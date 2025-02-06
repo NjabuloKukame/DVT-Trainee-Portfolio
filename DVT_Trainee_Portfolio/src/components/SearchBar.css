@@ -1,0 +1,32 @@
+.input-container{
+    width:20% ;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 0px 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+    background-color: white;
+    margin-left: 140px;
+    margin-top: 25px;
+}
+input[type="text"]{
+    width: 90%;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    color: black;
+    outline: none;
+    height: 20%;
+
+}
+input[type="text"]::placeholder{
+    color: grey;
+}
+input{
+    width: 30%;
+    height: 30%;
+}

@@ -1,14 +1,13 @@
 import './styles.css';
 import './Search.css';
 import Header from './components/Header';
+import SearchBar from './components/SearchBar';
 
 function Search(){
     return(
         <>
             <Header/>
-            <div>
-                <h1>Search</h1>
-            </div>
+            <SearchBar> </SearchBar>
         </>
         
     );

@@ -1,7 +1,8 @@
 import './styles.css';
 import './Portfolio.css';
 import Header from './components/Header';
-
+import { Link } from 'react-router-dom';
+import UserProfile from './UserPortfolio';
 import React from 'react';
 
 function Portfolio() {
@@ -19,6 +20,7 @@ function Portfolio() {
                 <div className="carousel">
                     <button className="carousel-navigation prev">&#10094;</button>
                     <div className="carousel-inner-full">
+                    <Link to="/UserPortfolio" >
                         <div className="carousel-item-top">
                             <img src="images/1.jpg" alt="Image 1" />
                             <div className="carousel-caption">
@@ -47,6 +49,7 @@ function Portfolio() {
                             <a href="#"><i className="bi bi-envelope-fill"></i></a>
                             <a href="#"><i className="bi bi-telephone"></i></a>
                         </div>
+                        </Link>
                     </div>
                     <button className="carousel-navigation next">&#10095;</button>
                 </div>

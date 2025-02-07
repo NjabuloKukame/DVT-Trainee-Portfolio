@@ -6,14 +6,14 @@
     border-radius: 10px;
     padding: 20px;
     width: 100%;
+    height: max-content;
     max-width: 1000px;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     
 }
-
 /* Hover effect */
 .card:hover {
     transform: scale(1.05);
@@ -22,30 +22,29 @@
 
 /* Profile picture */
 .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid yellow;
-    margin-bottom: 10px;
-    margin-right: 5%;
+    margin: 1% 5% 0% 2%;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
 }
 
 /* Name styling */
 .name {
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: underline;
-    margin-bottom: 10px;
-    text-align: left;
+    font-size: 27px;
+    border-bottom: 3px solid var(--yellow);
+    width: max-content;
+    margin-bottom: 0.5%;
 }
 
 /* Description text */
 .description {
-    font-size: 16px;
-    font-style: italic;
-    color: yellow;
-    text-align: left;
+    color: var(--yellow);
 }
 
 /* Responsive Design */

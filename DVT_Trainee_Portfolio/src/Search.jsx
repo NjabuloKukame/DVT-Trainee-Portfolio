@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Filter from './components/Filter';
 import SearchBar from './components/SearchBar';
 import SearchResults from './components/SearchResults';
-import {employees, projects} from './MockSearch.json'
+import {employees} from './MockSearch.json'
 
 function Search(){
     return(
@@ -13,8 +13,9 @@ function Search(){
             <section className='search-box'>
                 <SearchBar> </SearchBar>
                 <div className='r-container-filter'>
-                    <Filter className='filter-bar'/>
-                    <SearchResults employees={employees} projects={projects} />
+                    <Filter/>
+
+                    <SearchResults employees={employees}/>
                 </div>
             </section>
         </>

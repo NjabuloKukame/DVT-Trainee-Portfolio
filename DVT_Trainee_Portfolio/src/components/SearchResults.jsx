@@ -2,14 +2,13 @@ import { Link } from "react-router-dom"
 import SearchNav from "./SearchNav";
 import './SearchResults.css'
 
-export default function SearchResults({employees, projects}) {
+export default function SearchResults({employees}) {
   return (
     <>
       <section className="results-container">
         <SearchNav />
       
         <ResultsList results={employees} id={'employee_id'} isProject={false} />
-        <ResultsList results={projects} id={'project_id'} isProject={true} />
 
       </section>
     </>
@@ -19,17 +18,15 @@ export default function SearchResults({employees, projects}) {
 export function ResultsList({results, isProject, id}){
 
   return (
-    <ul className="results-list">
+    <section className="results-list">
       {
         results.map((result) => {
           return (
-            <li className="li-result">
-              <Link to={'/portfolio'} key={result[id]} className="result-link">
-              <Results result={result} isProject={isProject} /></Link>
-            </li> 
+            <Link to={'/UserPortfolio'} key={result[id]} className="result-link">
+            <Results result={result} isProject={isProject} /></Link>
           );})
       }
-    </ul>
+    </section>
   )
 }
 
@@ -37,13 +34,19 @@ export function Results({result, isProject= false}) {
 
   return (
     <div className="results">
-      <div className="results-pic">
-        <img src={isProject ? result.screenshot: result.avatar} alt=""  className={isProject ? "r-project-pic" : 'r-user-pic'}/>
+      <div className="r-profile">
+        <div className="results-pic">
+          <img src={isProject ? result.screenshot: result.avatar} alt=""  className={isProject ? "r-project-pic" : 'r-user-pic'}/>
+        </div>
+        
+        <div className="intro">
+          <p className="results-title">{isProject ? result.title: result.name}</p>
+          <p className="results-type">{isProject ? result.created_on : result.role}</p>
+        </div>
       </div>
+
       <div className="results-data">
-        <h2 className="results-title">{isProject ? result.title: result.name}</h2>
-        <p className="results-type">{isProject ? result.created_on : result.role}</p>
-        <p className="results-bio">{isProject ? result.description : result.bio}</p>
+        <p className="results-bio text-container">{isProject ? result.description : result.bio}</p>
       </div>
     </div>
   );

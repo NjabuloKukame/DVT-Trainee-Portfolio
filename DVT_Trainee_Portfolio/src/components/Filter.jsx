@@ -3,7 +3,7 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import {employees} from "../MockSearch.json"
 import { useState } from "react";
 
-function Filter(){
+function Filter({searchResults, fn}){
     // Get all unique languages and roles
     const languages = employees.map((employee) => employee.skills);
     const roles = employees.map((employee) => employee.role);
@@ -19,9 +19,29 @@ function Filter(){
         }else{
             setSelectedFilter((prev) => [...prev, filter]);
         }
+        const filteredResults = searchResults.filter((employee) => {
+            return selectedFilter.every((filter) => employee.skills.includes(filter));
+        });
+        fn(filteredResults);
+    }
 
-        console.log(selectedFilter);
-        
+    const handleFilterClickRole = (filter) => {
+        if(selectedFilter.includes(filter)){
+            setSelectedFilter((prev) => prev.filter((item) => item !== filter));
+            const remainingFilters = selectedFilter.filter(f => f !== filter);
+            const filteredResults = searchResults.filter((employee) => {
+                return remainingFilters.length === 0 || 
+                       remainingFilters.some(f => employee.role === f);
+            });
+            fn(filteredResults);
+        }else{
+            setSelectedFilter((prev) => [...prev, filter]);
+            const filteredResults = searchResults.filter((employee) => {
+                return employee.role === filter;
+            });
+            fn(filteredResults);
+        }
+
     }
     return(
         <section className="filter-container">
@@ -49,7 +69,12 @@ function Filter(){
                     <p className="filter-section-title">Roles</p>
                     <div className="filter-content-container">
                         {allRoles.map((role) => (
-                            <FilterItem name={role}/>
+                            <FilterItem 
+                                name={role} 
+                                key={role}
+                                onToggle={handleFilterClickRole}
+                                isSelected={selectedFilter.includes(role)}
+                            />
                         ))}
                     </div>
                 </div>

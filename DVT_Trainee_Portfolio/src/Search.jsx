@@ -3,17 +3,21 @@ import './Search.css';
 
 import Filter from './components/Filter';
 import SearchResults from './components/SearchResults';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function Search({searchResults}){
-    useEffect(()=>{}, [searchResults]);
+    const [filteredResults, setFilteredResults] = useState(searchResults)
+    
+    useEffect(()=>{
+        setFilteredResults(searchResults)
+    }, [searchResults]);
     return(
         <>
             
             <section className='search-box'>
                 <div className='r-container-filter'>
-                    <Filter/>
-                    <SearchResults employees={searchResults}/>
+                    <Filter searchResults={searchResults} fn={setFilteredResults}/>
+                    <SearchResults employees={filteredResults}/>
                 </div>
             </section>
         </>

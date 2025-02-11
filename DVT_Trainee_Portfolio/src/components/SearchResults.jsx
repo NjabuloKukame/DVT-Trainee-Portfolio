@@ -1,34 +1,38 @@
 import { Link } from "react-router-dom"
 import SearchNav from "./SearchNav";
-import './SearchResults.css'
+import './SearchResults.css';
 
-export default function SearchResults({employees}) {
+export default function SearchResults({results, resultsCopy, filter}) {
   return (
     <>
       <section className="results-container">
-        <SearchNav /> 
-        <ResultsList results={employees} id={'employee_id'} isProject={false} />
+        <SearchNav filter={filter} results={results} />       
+        <ResultsList results={resultsCopy} id={'employee_id'}/>
       </section>
     </>
   )
 };
 
-export function ResultsList({results, isProject, id}){
+export function ResultsList({results, id}){
 
+  if(results.length == 0){
+    return <h1>Results not Found</h1>
+  }
+  
   return (
     <section className="results-list">
       {
         results.map((result, index) => {
           return (
             <Link to={'/UserPortfolio'} key={result[id]+index} className="result-link">
-            <Results result={result} isProject={isProject} /></Link>
+            <Results result={result} isProject={result.employee_id === undefined} /></Link>
           );})
-      }
+        }
     </section>
   )
 }
 
-export function Results({result, isProject= false}) {
+export function Results({result, isProject}) {
 
   return (
     <div className="results">

@@ -6,10 +6,8 @@ export default function SearchResults({employees}) {
   return (
     <>
       <section className="results-container">
-        <SearchNav />
-      
+        <SearchNav /> 
         <ResultsList results={employees} id={'employee_id'} isProject={false} />
-
       </section>
     </>
   )
@@ -20,9 +18,9 @@ export function ResultsList({results, isProject, id}){
   return (
     <section className="results-list">
       {
-        results.map((result) => {
+        results.map((result, index) => {
           return (
-            <Link to={'/UserPortfolio'} key={result[id]} className="result-link">
+            <Link to={'/UserPortfolio'} key={result[id]+index} className="result-link">
             <Results result={result} isProject={isProject} /></Link>
           );})
       }

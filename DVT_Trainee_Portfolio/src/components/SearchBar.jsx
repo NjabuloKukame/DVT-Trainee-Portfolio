@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./SearchBar.css";
 import SearchIcon from '@mui/icons-material/Search';
-// import {employees, projects} from './MockSearch.json';
+import SearchResults from './SearchResults';
+import {employees} from '../MockSearch.json';
 
 function SearchBar(){
   const [search,setSearch] = useState('')
@@ -10,11 +11,13 @@ function SearchBar(){
     const search = e.target.value;
     setSearch(search)
 
-  //   const filteredEmployees = employees.filter((employee) =>
-  //   employee.firstName.toLowercase().includes(search.toLowerCase())
-  // );
+    const filteredEmployees = employees.filter((employee) => {
+    employee.name.toLowercase().includes(search.toLowerCase())
+   } 
+  );
 
-  // setFilteredEmployees(filtered);
+   < SearchResults employees={
+    filteredEmployees}/>
   }
 
     return(

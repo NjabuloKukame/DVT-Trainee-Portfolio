@@ -4,7 +4,10 @@
   justify-content: space-between;
   align-items: center;
 }
-
+.results-title{
+ font-weight: 600;
+ font-size: 1.2em;
+}
 .result-nav-btn {
   background-color: transparent;
   font-weight: 600;
@@ -100,9 +103,13 @@
 .results-list{
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1em;
+  max-height: 500px;
+  overflow-y: scroll;
+  padding-right: 1em;
 }
+
 .r-profile{
   display: flex;
   gap: 1em;
@@ -126,15 +133,34 @@
 .text-container {
 
   font-size: .9em;
-  height: 6em; 
+  height: 4.5em; 
   overflow: hidden; 
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  line-clamp: 4;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   text-overflow: ellipsis; 
   word-wrap: break-word; 
   line-height: 1.5em;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(56, 55, 55);
+}
+
+.results-list::-webkit-scrollbar {
+  width: 2px;
+  margin: 2em;
+}
+
+.results-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+.results-list::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+  margin: 2px;
+  border-radius: 10px;
+}
+
+.results-list::-webkit-scrollbar-thumb:hover {
+  background: var(--yellow); 
 }

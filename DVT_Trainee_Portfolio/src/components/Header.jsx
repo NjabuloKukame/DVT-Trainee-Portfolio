@@ -4,8 +4,18 @@ import './Header.css'
 import dvtLogo from "../assets/dvt_logo.jpg";
 import homeIcon from "../assets/icons8-home-100.png";
 import menuIcon from "../assets/icons8-menu-100.png";
+import supportIcon from "../assets/icons8-support-100.png";
+import darkModeIcon from "../assets/icons8-moon-100.png";
+import logOutIcon from "../assets/icons8-log-out-100.png";
 
 function Header(){
+    const [isOpen, setIsOpen] = useState(false);
+
+    // Function to toggle sidebar visibility
+    const toggleSidebar = () => {
+        setIsOpen(!isOpen);
+    };
+
     return(
         <header className='header'>
             <div className='logo'>
@@ -36,8 +46,28 @@ function Header(){
             </nav>
 
 
-            <div className="menu">
+            <div className="menu" onClick={toggleSidebar}>
                 <img src={menuIcon} alt="Menu Icon" className="icon"/>
+            </div>
+
+            <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
+                <button className="close-btn" onClick={toggleSidebar}>X</button>
+
+                <div className="sidebar-content">
+                    <img src={supportIcon} alt="" className="sidebar-logo"/>
+                    <h2>Support</h2>
+                </div>
+
+                <div className="sidebar-content dark-mode">
+                    <img src={darkModeIcon} alt="" className="sidebar-logo"/>
+                    <h2>Dark Mode</h2>
+                </div>
+
+                <div className="sidebar-content log-out">
+                    <img src={logOutIcon} alt="" className="sidebar-logo"/>
+                    <h2>Logout</h2>
+                </div>
+
             </div>
         </header>
     );

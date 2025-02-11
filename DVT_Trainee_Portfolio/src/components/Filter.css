@@ -27,7 +27,6 @@
 }
 
 .scroller{
-    max-height: 55vh;
     overflow-y: scroll;
 }
 

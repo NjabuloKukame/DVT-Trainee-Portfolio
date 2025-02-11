@@ -1,21 +1,19 @@
 import './styles.css';
 import './Search.css';
-import Header from './components/Header';
-import Filter from './components/Filter';
-import SearchBar from './components/SearchBar';
-import SearchResults from './components/SearchResults';
-import {employees} from './MockSearch.json'
 
-function Search(){
+import Filter from './components/Filter';
+import SearchResults from './components/SearchResults';
+import { useEffect } from 'react';
+
+function Search({searchResults}){
+    useEffect(()=>{}, [searchResults]);
     return(
         <>
-            <Header/>
+            
             <section className='search-box'>
-                <SearchBar> </SearchBar>
                 <div className='r-container-filter'>
                     <Filter/>
-
-                    <SearchResults employees={employees}/>
+                    <SearchResults employees={searchResults}/>
                 </div>
             </section>
         </>
@@ -24,3 +22,4 @@ function Search(){
 }
 
 export default Search;
+

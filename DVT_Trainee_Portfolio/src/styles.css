@@ -13,6 +13,11 @@
     --purple: #4e4376;
     --gray: #D1D1D1;
     --black: #000000;
+
+    /* Dark Mode Colors */
+    --dark-yellow: #E2BF00;
+    --dark-blue: #2B5876;
+    --dark-gray: #888888;
 }
 
 /* Don't Change anything here */
@@ -22,5 +27,10 @@ body{
     background-size: cover;
     font-family: "Inter", "Arial";
     color: var(--white);
-    
+    transition: 0.5s ease-in-out;
+}
+
+body.dark-mode {
+    background: linear-gradient(-20deg, #10212b 0%, #241b34 100%);
+    transition: 0.5s ease-in-out;
 }

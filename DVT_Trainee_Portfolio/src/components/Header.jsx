@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import './Header.css'
 import dvtLogo from "../assets/dvt_logo.jpg";
@@ -15,6 +15,20 @@ function Header(){
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
     };
+
+    const [darkMode, setDarkMode] = useState(() => {
+        return localStorage.getItem("darkMode") === "enabled";
+    });
+
+    useEffect(() => {
+        if (darkMode) {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("darkMode", "disabled");
+        }
+    }, [darkMode]);
 
     return(
         <header className='header'>
@@ -58,7 +72,7 @@ function Header(){
                     <h2>Support</h2>
                 </div>
 
-                <div className="sidebar-content dark-mode">
+                <div className={`sidebar-content dark-mode ${darkMode ? "dark-mode-enabled" : ""}`} onClick={() => setDarkMode(!darkMode)}>
                     <img src={darkModeIcon} alt="" className="sidebar-logo"/>
                     <h2>Dark Mode</h2>
                 </div>

@@ -147,9 +147,10 @@
     margin-top: 6.5px;
 }
 
-.dark-mode:active{
-    background-color: var(--black);
-    color: var(--white);
+.dark-mode-enabled {
+    background-color: var(--blue);
+    color: var(--yellow); 
+    border-radius: 20px; 
 }
 
 .log-out{

@@ -50,6 +50,25 @@ export function Results({result, isProject}) {
       <div className="results-data">
         <p className="results-bio text-container">{isProject ? result.description : result.bio}</p>
       </div>
+      <div className="user-skills">
+        <p className="skills-title">{isProject ? 'Technologies:' : 'Skills:'}</p>
+        {
+          !isProject ? <GenerateBadges badgeList={result.skills} /> : <GenerateBadges badgeList={result.technologies} />
+        }
+      </div>
     </div>
   );
+}
+
+
+export function GenerateBadges({badgeList}){
+  return (
+    <ul className="skills-list">
+      {
+        badgeList.map((badge)=>{
+          return (<li><img src={`https://img.shields.io/badge/-${badge}-E34F26?style=flat-square&logoColor=ffffff`} alt="HTML" height="15"/></li>)
+        })
+      }
+    </ul>
+  )
 }

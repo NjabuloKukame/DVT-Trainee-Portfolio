@@ -163,3 +163,18 @@
 .results-list::-webkit-scrollbar-thumb:hover {
   background: var(--yellow); 
 }
+
+.user-skills{
+  display: flex;
+  gap:1em;
+}
+
+.skills-list{
+  list-style: none;
+  display: flex;
+  gap: .5em;
+}
+.skills-title{
+  font-weight: 600;
+  font-size: .9em;
+}

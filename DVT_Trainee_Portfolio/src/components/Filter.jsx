@@ -2,46 +2,60 @@ import "./Filter.css"
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import {employees} from "../MockSearch.json"
 import { useState } from "react";
+import { generatePastelColor } from "../lib/color";
 
 function Filter({searchResults, fn}){
+    console.log(searchResults);
+    
     // Get all unique languages and roles
-    const languages = employees.map((employee) => employee.skills);
-    const roles = employees.map((employee) => employee.role);
+    const languages = searchResults.map((employee) => employee.skills);
+    const roles = searchResults.map((employee) => employee.role);
     // Remove duplicates
     const allLanguages = [...new Set(languages.flat())];
     const allRoles = [...new Set(roles)];
 
     const [selectedFilter, setSelectedFilter] = useState([]);
 
-    const handleFilterClick = (filter) => {
+    const handleFilterClickLanguage = (filter) => {
+        let newSelectedFilter;
         if(selectedFilter.includes(filter)){
-            setSelectedFilter((prev) => prev.filter((item) => item !== filter));
+            // Remove filter
+            newSelectedFilter = selectedFilter.filter((item) => item !== filter);
         }else{
-            setSelectedFilter((prev) => [...prev, filter]);
+            // Add filter
+            newSelectedFilter =  [...selectedFilter, filter];
         }
+
+        setSelectedFilter(newSelectedFilter);
+        
         const filteredResults = searchResults.filter((employee) => {
-            return selectedFilter.every((filter) => employee.skills.includes(filter));
+            if(newSelectedFilter.length === 0) return true;
+            return newSelectedFilter.some((filter) => employee.skills.includes(filter));
         });
         fn(filteredResults);
     }
 
     const handleFilterClickRole = (filter) => {
+        let newSelectedFilter;
         if(selectedFilter.includes(filter)){
-            setSelectedFilter((prev) => prev.filter((item) => item !== filter));
-            const remainingFilters = selectedFilter.filter(f => f !== filter);
-            const filteredResults = searchResults.filter((employee) => {
-                return remainingFilters.length === 0 || 
-                       remainingFilters.some(f => employee.role === f);
-            });
-            fn(filteredResults);
-        }else{
-            setSelectedFilter((prev) => [...prev, filter]);
-            const filteredResults = searchResults.filter((employee) => {
-                return employee.role === filter;
-            });
-            fn(filteredResults);
+            // Remove the filter
+            newSelectedFilter = selectedFilter.filter((item) => item !== filter);
+        } else {
+            // Add the filter
+            newSelectedFilter = [...selectedFilter, filter];
         }
-
+        
+        setSelectedFilter(newSelectedFilter);
+        
+        
+        const filteredResults = searchResults.filter((employee) => {
+            // If no roles selected, show all results
+            if (newSelectedFilter.length === 0) return true;
+            // Show employee if their role matches any of the selected filters
+            return newSelectedFilter.some(f => employee.role === f);
+        });
+        
+        fn(filteredResults);
     }
     return(
         <section className="filter-container">
@@ -58,7 +72,7 @@ function Filter({searchResults, fn}){
                             <FilterItem 
                                 key={language}
                                 name={language} 
-                                onToggle={handleFilterClick}
+                                onToggle={handleFilterClickLanguage}
                                 isSelected={selectedFilter.includes(language)}
                             />
                         ))}
@@ -111,16 +125,14 @@ function Filter({searchResults, fn}){
 
 
 function FilterItem({name, onToggle, isSelected}){
-    const generatePastelColor = () => {
-        const hue = Math.floor(Math.random() * 360);
-        return `hsl(${hue}, 100%, 50%)`;
-    };
     return(
         <div className={`filter-content ${isSelected ? "selected" : ""}`}>
-            <span className="filter-content-circle" style={{backgroundColor: generatePastelColor()}}></span>
+            <span className="filter-content-circle" style={{backgroundColor: generatePastelColor(name)}}></span>
             <p className="filter-content-name" onClick={() => onToggle(name)}>{name}</p>
         </div>
     )
 }
+
+
 
 export default Filter;

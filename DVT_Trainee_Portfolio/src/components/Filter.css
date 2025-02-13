@@ -47,11 +47,12 @@
 }
 
 .filter-content-name:hover{
-    color: #000;
+    color: var(--blue);
 }
 
 .selected{
-    color: #000;
+    color: var(--yellow);
+    font-weight: 600;
 }
 
 .filter-content-circle{

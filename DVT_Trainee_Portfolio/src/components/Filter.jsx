@@ -1,8 +1,9 @@
 import "./Filter.css"
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
-import {employees} from "../MockSearch.json"
 import { useState } from "react";
 import { generatePastelColor } from "../lib/color";
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 function Filter({searchResults, fn}){
     console.log(searchResults);
@@ -12,6 +13,7 @@ function Filter({searchResults, fn}){
     const roles = searchResults.map((employee) => employee.role);
     // Remove duplicates
     const allLanguages = [...new Set(languages.flat())];
+    const [topLanguages, setTopLanguages] = useState(allLanguages.slice(0,3))
     const allRoles = [...new Set(roles)];
 
     const [selectedFilter, setSelectedFilter] = useState([]);
@@ -66,9 +68,19 @@ function Filter({searchResults, fn}){
             <div className="divider"></div>
             <div className="scroller">
                 <div className="filter-section">
-                    <p className="filter-section-title">Languages</p>
+                    <div className="header-container">
+                        <p className="filter-section-title">Languages</p>
+                        <p onClick={()=>{
+                            if(topLanguages.length>3){
+                                setTopLanguages(allLanguages.slice(0,3))
+                            }else{
+                                setTopLanguages(allLanguages)
+                            }}}>
+                            {topLanguages.length>3? <RemoveIcon className="header-icon" fontSize="small"/>:<AddIcon fontSize="small" className="header-icon"/>}
+                        </p>
+                    </div>
                     <div className="filter-content-container">
-                        {allLanguages.map((language) => (
+                        {topLanguages.map((language) => (
                             <FilterItem 
                                 key={language}
                                 name={language} 
@@ -77,6 +89,7 @@ function Filter({searchResults, fn}){
                             />
                         ))}
                     </div>
+                    
                 </div>
                 <div className="divider"></div>
                 <div className="filter-section">
@@ -92,7 +105,7 @@ function Filter({searchResults, fn}){
                         ))}
                     </div>
                 </div>
-                <div className="divider"></div>
+                {/* <div className="divider"></div>
                 <div className="filter-section">
                     <p className="filter-section-title">Tools</p>
                     <div className="filter-content-container">
@@ -116,7 +129,7 @@ function Filter({searchResults, fn}){
                         <FilterItem name={"iOS"}/>
                         <FilterItem name={"Android"}/>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );

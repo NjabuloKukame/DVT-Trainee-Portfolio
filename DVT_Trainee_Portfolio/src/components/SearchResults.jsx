@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import SearchNav from "./SearchNav";
+import { generatePastelColor } from "../lib/color";
 import './SearchResults.css';
 
 export default function SearchResults({results, resultsCopy, filter}) {
@@ -51,7 +52,6 @@ export function Results({result, isProject}) {
         <p className="results-bio text-container">{isProject ? result.description : result.bio}</p>
       </div>
       <div className="user-skills">
-        <p className="skills-title">{isProject ? 'Technologies:' : 'Skills:'}</p>
         {
           !isProject ? <GenerateBadges badgeList={result.skills} /> : <GenerateBadges badgeList={result.technologies} />
         }
@@ -62,13 +62,18 @@ export function Results({result, isProject}) {
 
 
 export function GenerateBadges({badgeList}){
+  const lessList = badgeList.slice(0, 3); 
+  const plusList = badgeList.slice(3);
   return (
+    <>
     <ul className="skills-list">
       {
-        badgeList.map((badge)=>{
-          return (<li><img src={`https://img.shields.io/badge/-${badge}-E34F26?style=flat-square&logoColor=ffffff`} alt="HTML" height="15"/></li>)
+        lessList.map((badge)=>{
+          return (<li><p  className="badge" style={{background: generatePastelColor(badge)}}>{badge}</p></li>)
         })
       }
+      <li className="badge" style={{background: 'gray'}}>{`${plusList.length}+`}</li>
     </ul>
+    </>
   )
 }

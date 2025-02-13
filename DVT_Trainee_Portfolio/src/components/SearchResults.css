@@ -132,7 +132,7 @@
 
 .text-container {
 
-  font-size: .9em;
+  font-size: .8em;
   height: 4.9em; 
   overflow: hidden; 
   display: -webkit-box;
@@ -167,6 +167,7 @@
 .user-skills{
   display: flex;
   gap:1em;
+  align-items: center;
 }
 
 .skills-list{
@@ -177,4 +178,16 @@
 .skills-title{
   font-weight: 600;
   font-size: .9em;
+}
+
+.badge{
+  padding: .5em;
+  font-size: .7em;
+  color: white;
+  border-radius: 2em;
+  max-width: fit-content;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

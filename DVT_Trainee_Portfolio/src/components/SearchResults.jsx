@@ -1,50 +1,79 @@
 import { Link } from "react-router-dom"
 import SearchNav from "./SearchNav";
-import './SearchResults.css'
+import { generatePastelColor } from "../lib/color";
+import './SearchResults.css';
 
-export default function SearchResults({employees, projects}) {
+export default function SearchResults({results, resultsCopy, filter}) {
   return (
     <>
       <section className="results-container">
-        <SearchNav />
-      
-        <ResultsList results={employees} id={'employee_id'} isProject={false} />
-        <ResultsList results={projects} id={'project_id'} isProject={true} />
-
+        <SearchNav filter={filter} results={results} />       
+        <ResultsList results={resultsCopy} id={'employee_id'}/>
       </section>
     </>
   )
 };
 
-export function ResultsList({results, isProject, id}){
+export function ResultsList({results, id}){
 
+  if(results.length == 0){
+    return <h1>Results not Found</h1>
+  }
+  
   return (
-    <ul className="results-list">
+    <section className="results-list">
       {
-        results.map((result) => {
+        results.map((result, index) => {
           return (
-            <li className="li-result">
-              <Link to={'/portfolio'} key={result[id]} className="result-link">
-              <Results result={result} isProject={isProject} /></Link>
-            </li> 
+            <Link to={'/UserPortfolio'} key={result[id]+index} className="result-link">
+            <Results result={result} isProject={result.employee_id === undefined} /></Link>
           );})
-      }
-    </ul>
+        }
+    </section>
   )
 }
 
-export function Results({result, isProject= false}) {
+export function Results({result, isProject}) {
 
   return (
     <div className="results">
-      <div className="results-pic">
-        <img src={isProject ? result.screenshot: result.avatar} alt=""  className={isProject ? "r-project-pic" : 'r-user-pic'}/>
+      <div className="r-profile">
+        <div className="results-pic">
+          <img src={isProject ? result.screenshot: result.avatar} alt=""  className={isProject ? "r-project-pic" : 'r-user-pic'}/>
+        </div>
+        
+        <div className="intro">
+          <p className="results-title">{isProject ? result.title: result.name}</p>
+          <p className="results-type">{isProject ? result.created_on : result.role}</p>
+        </div>
       </div>
+
       <div className="results-data">
-        <h2 className="results-title">{isProject ? result.title: result.name}</h2>
-        <p className="results-type">{isProject ? result.created_on : result.role}</p>
-        <p className="results-bio">{isProject ? result.description : result.bio}</p>
+        <p className="results-bio text-container">{isProject ? result.description : result.bio}</p>
+      </div>
+      <div className="user-skills">
+        {
+          !isProject ? <GenerateBadges badgeList={result.skills} /> : <GenerateBadges badgeList={result.technologies} />
+        }
       </div>
     </div>
   );
+}
+
+
+export function GenerateBadges({badgeList}){
+  const lessList = badgeList.slice(0, 3); 
+  const plusList = badgeList.slice(3);
+  return (
+    <>
+    <ul className="skills-list">
+      {
+        lessList.map((badge)=>{
+          return (<li><p  className="badge" style={{background: generatePastelColor(badge)}}>{badge}</p></li>)
+        })
+      }
+      <li className="badge" style={{background: 'gray'}}>{`${plusList.length}+`}</li>
+    </ul>
+    </>
+  )
 }

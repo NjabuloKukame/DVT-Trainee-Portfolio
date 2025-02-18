@@ -72,10 +72,21 @@ function Header(){
                     <h2>Support</h2>
                 </div>
 
-                <div className={`sidebar-content dark-mode ${darkMode ? "dark-mode-enabled" : ""}`} onClick={() => setDarkMode(!darkMode)}>
-                    <img src={darkModeIcon} alt="" className="sidebar-logo"/>
-                    <h2>Dark Mode</h2>
+                <div className={` ${darkMode ? "dark-mode-enabled" : ""}`}>
+            <label htmlFor="switch" className="switch">
+                <input
+                    type="checkbox"
+                    id="switch"
+                    checked={darkMode}
+                    onChange={() => setDarkMode(!darkMode)}
+                />
+                <div className="toggle"></div>
+                <div className="names">
+                    <p className="light">Light</p>
+                    <p className="dark">Dark</p>
                 </div>
+            </label>
+        </div>
 
                 <div className="log-out">
                 

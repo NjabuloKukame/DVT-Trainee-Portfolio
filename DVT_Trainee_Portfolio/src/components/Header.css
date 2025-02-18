@@ -253,17 +253,14 @@
     
 }
 
-/* Move the toggle when dark mode is active */
 .dark-mode-enabled .toggle {
     transform: translateX(7.2rem);
 }
 
-/* Hide default checkbox */
 input[type="checkbox"] {
     display: none;
 }
 
-/* Adjust text visibility */
 .names {
     font-size: 90%;
     font-weight: bold;

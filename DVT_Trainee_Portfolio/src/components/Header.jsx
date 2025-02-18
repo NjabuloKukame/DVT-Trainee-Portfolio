@@ -73,20 +73,20 @@ function Header(){
                 </div>
 
                 <div className={` ${darkMode ? "dark-mode-enabled" : ""}`}>
-            <label htmlFor="switch" className="switch">
-                <input
-                    type="checkbox"
-                    id="switch"
-                    checked={darkMode}
-                    onChange={() => setDarkMode(!darkMode)}
-                />
-                <div className="toggle"></div>
-                <div className="names">
-                    <p className="light">Light</p>
-                    <p className="dark">Dark</p>
+                    <label htmlFor="switch" className="switch">
+                        <input
+                            type="checkbox"
+                            id="switch"
+                            checked={darkMode}
+                            onChange={() => setDarkMode(!darkMode)}
+                        />
+                        <div className="toggle"></div>
+                        <div className="names">
+                            <p className="light">Light</p>
+                            <p className="dark">Dark</p>
+                        </div>
+                    </label>
                 </div>
-            </label>
-        </div>
 
                 <div className="log-out">
                 

@@ -215,7 +215,7 @@ const ProfileCreation = () =>
                     </div>
                     ):(
                     <div className='prof-pic-holder'>
-                        <User size={40} />
+                        <User size={40} color='black' />
                         {isEditing && (
                         <>
                             <input
@@ -294,7 +294,7 @@ const ProfileCreation = () =>
             {/* Skills Section */}
             <div className='personal-card'>
             <div className='card-header'>
-                <Code size={20} />
+                <Code size={20} color='black'/>
                 <h2>Skills</h2>
             </div>
 
@@ -328,7 +328,7 @@ const ProfileCreation = () =>
             {/*Projects Section */}
             <div className='personal-card'>
                 <div className='card-header'>
-                <Briefcase size={20} />
+                <Briefcase size={20} color='black' />
                 <h2>Projects</h2>
                 </div>
 

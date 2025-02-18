@@ -1,20 +1,23 @@
 import './styles.css';
 import './Search.css';
-import Header from './components/Header';
-import Filter from './components/Filter';
-import SearchBar from './components/SearchBar';
-import SearchResults from './components/SearchResults';
-import {employees, projects} from './MockSearch.json'
 
-function Search(){
+import Filter from './components/Filter';
+import SearchResults from './components/SearchResults';
+import { useEffect, useState } from 'react';
+
+function Search({searchResults}){
+    const [filteredResults, setFilteredResults] = useState([...searchResults])
+    
+    useEffect(()=>{
+        setFilteredResults([...searchResults])
+    }, [searchResults]);
     return(
         <>
-            <Header/>
+            
             <section className='search-box'>
-                <SearchBar> </SearchBar>
                 <div className='r-container-filter'>
-                    <Filter className='filter-bar'/>
-                    <SearchResults employees={employees} projects={projects} />
+                    <Filter searchResults={searchResults} fn={setFilteredResults}/>
+                    <SearchResults resultsCopy={filteredResults} results={searchResults} filter={setFilteredResults} />
                 </div>
             </section>
         </>
@@ -23,3 +26,4 @@ function Search(){
 }
 
 export default Search;
+

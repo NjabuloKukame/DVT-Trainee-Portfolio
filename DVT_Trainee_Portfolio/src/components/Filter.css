@@ -3,7 +3,7 @@
 .filter-container{
     /* max-width: 240px; */
     background-color: rgba(240, 248, 255, 0.408);
-    /* height: 75vh; */
+    min-height: 500px;
     height: fit-content;
     /* padding-inline: 1em; */
     border-radius: .5em;
@@ -27,7 +27,6 @@
 }
 
 .scroller{
-    max-height: 55vh;
     overflow-y: scroll;
 }
 
@@ -47,6 +46,15 @@
     font-size: .875em;
 }
 
+.filter-content-name:hover{
+    color: var(--blue);
+}
+
+.selected{
+    color: var(--yellow);
+    font-weight: 600;
+}
+
 .filter-content-circle{
     height: 10px;
     width: 10px;
@@ -63,51 +71,12 @@
     margin-top: .2em;
 }
 
-.red{
-    background-color: #587b7f;
+.header-container{
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
 }
 
-.yellow {
-    background-color: #8dab7f;
-}
-
-.blue {
-    background-color: #CFEE9E;
-}
-
-.color-1{
-    background-color: #DE6B48;
-}
-.color-2{
-    background-color: #f4b9b2;
-}
-.color-3{
-    background-color: #daedbd;
-}
-.color-4{
-    background-color: #7dbbc3;
-}
-.color-5{
-    background-color: #ffe74c;
-}
-.color-6{
-    background-color: #ff5964;
-}
-.color-7{
-    background-color: #ffffff;
-}
-.color-8{
-    background-color: #38618c;
-}
-.color-9{
-    background-color: #35a7ff;
-}
-.color-10{
-    background-color: #F24236;
-}
-.color-11{
-    background-color: #FA8334;
-}
-.color-12{
-    background-color: #388697;
-}
+.header-icon:hover {
+    color: var(--yellow);
+} 

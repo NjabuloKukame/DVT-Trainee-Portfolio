@@ -171,7 +171,6 @@
     background-color: var(--dark-gray);
   }
   
-  /* plus sign */
   .sign {
     width: 100%;
     transition-duration: .3s;
@@ -187,7 +186,7 @@
   .sign svg path {
     fill: white;
   }
-  /* text */
+
   .text {
     position: absolute;
     right: 0%;
@@ -198,7 +197,7 @@
     font-weight: 600;
     transition-duration: .3s;
   }
-  /* hover effect on button width */
+  
   .logout-btn:hover {
     width: 100%;
     border-radius: 40px;
@@ -210,7 +209,7 @@
     transition-duration: .3s;
     padding-left: 20px;
   }
-  /* hover effect button's text */
+  
   .logout-btn:hover .text {
     opacity: 1;
     width: 80%;
@@ -219,7 +218,7 @@
     text-align: center;
 
   }
-  /* button click effect*/
+  
   .logout-btn:active {
     transform: translate(2px ,2px);
   }

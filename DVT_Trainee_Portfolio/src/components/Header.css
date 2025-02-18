@@ -65,8 +65,8 @@
 }
 
 .icon {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
 }
 
 .home-icon {
@@ -83,6 +83,7 @@
     height: 40px;
     cursor: pointer;
     margin-top: 5px;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .menu:hover {

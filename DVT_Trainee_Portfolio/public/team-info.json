@@ -15,11 +15,6 @@
       "image": "./src/assets/user_placeholder.png"
     },
     {
-      "name": "Tiffany",
-      "description": "A sweet, kind-hearted young lady who's incredibly smart. What I love most about her is her business-minded nature; she's loved by everyone.",
-      "image": "./src/assets/user_placeholder.png"
-    },
-    {
         "name": "Njabulo",
         "description": "My son, calm and incredibly smart. dresses very wellI wouldn't call him shy he just takes his time to assess his environment before getting comfortable.",
         "image": "./src/assets/user_placeholder.png"
@@ -53,11 +48,6 @@
         "name": "Slindokuhle",
         "description": "He's like the male version of Remocrazy but so sweet. I admire his hard-working nature and determination to achieve his goals. He's a true family man who deeply loves his daughter.",
         "image": "./src/assets/user_placeholder.png"
-    },
-    {
-        "name": "Dylan",
-        "description":"A quiet gentleman who doesn't talk much and can come across as shy, but once you get to know him, he's an absolute sweetheart.",
-        "image":"./src/assets/user_placeholder.png"
     }
 
   ]

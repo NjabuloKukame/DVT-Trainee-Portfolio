@@ -95,8 +95,61 @@
     margin-right: 5.79%;
 }
 
-.cv-btn button {
-    padding: 10px 20px;
+.button-section {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 5px;
+    margin-left: 500px;
+}
+
+.linkedin-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Increased padding for better clickability */
+    background-color: transparent; /* Remove background if needed */
+    border: none;
+    cursor: pointer;
+}
+
+.linkedin-img {
+    width: 40px; /* Adjust size */
+    height: 40px;
+}
+
+.github-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Increased padding for better clickability */
+    background-color: transparent; /* Remove background if needed */
+    border: none;
+    cursor: pointer;
+}
+
+.github-img {
+    width: 40px; /* Adjust size */
+    height: 40px;
+}
+
+.contact-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Increased padding for better clickability */
+    background-color: transparent; /* Remove background if needed */
+    border: none;
+    cursor: pointer;
+}
+
+.contact-img {
+    width: 40px; /* Adjust size */
+    height: 40px;
+}
+
+.cv-btn {
+    padding: 5px 48px;
     background-color: #007bff;
     color: white;
     margin-bottom: 20px;

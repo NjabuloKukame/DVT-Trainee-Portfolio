@@ -1,6 +1,9 @@
 import './styles.css';
 import './UserPortfolio.css';
 import ProfileImage from './assets/icons8-user-profile-100.png';
+import Github from './assets/icons8-github-100.png'
+import LinkedIn from './assets/icons8-linkedin-100.png'
+import Contact from './assets/icons8-contact-100.png'
 import Header from './components/Header';
 
 function UserPortfolio(){
@@ -22,7 +25,7 @@ function UserPortfolio(){
                     </div>
                     </div>
                     <div className="about-section">
-                        <p>I am a fullstack developer at DVT. </p>
+                        <p>I am a fullstack developer at DVT... </p>
                 </div>
                 </div>
 
@@ -56,9 +59,22 @@ function UserPortfolio(){
                     
                 </div>
                     <div>
-                    <div className="cv-btn">
-                        <button>Download CV</button>
-                    </div>
+                        <div className='cv-button'>
+                            <button className="cv-btn">Download CV</button>
+                        </div>
+
+                        <div className="button-section">
+                            
+                            <button className="linkedin-btn">
+                                <img src={LinkedIn} alt="LinkedIn" className="linkedin-img" />
+                            </button>
+                            <button className="github-btn">
+                                <img src={Github} alt="Github" className="github-img" />
+                            </button>
+                            <button className="contact-btn">
+                                <img src={Contact} alt="Contact" className="contact-img" />
+                            </button>
+                        </div>
                 </div>
             </div>
         </>

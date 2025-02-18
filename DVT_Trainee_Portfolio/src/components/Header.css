@@ -154,8 +154,76 @@
     border-radius: 20px; 
 }
 
-.log-out{
-    margin-top: 240%;
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: var(--dark-gray);
+  }
+  
+  /* plus sign */
+  .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign svg {
+    width: 17px;
+  }
+  
+  .sign svg path {
+    fill: white;
+  }
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .logout-btn:hover {
+    width: 100%;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+  .logout-btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+  .logout-btn:hover .text {
+    opacity: 1;
+    width: 80%;
+    transition-duration: .3s;
+    margin-right: 10px;
+    text-align: center;
+
+  }
+  /* button click effect*/
+  .logout-btn:active {
+    transform: translate(2px ,2px);
+  }
+
+  .log-out{
+    margin-top: 65vh;
+  }

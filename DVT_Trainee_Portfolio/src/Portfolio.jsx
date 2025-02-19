@@ -49,7 +49,7 @@ function Portfolio() {
                     </div>
 
                     <button className="carousel-navigation next">&#10095;</button>
-                </div>
+                </div>                
             </section>
         </>
     );

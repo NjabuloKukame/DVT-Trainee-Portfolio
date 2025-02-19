@@ -3,9 +3,36 @@ import "./Portfolio.css";
 import Header from "./components/Header";
 import { Link } from "react-router-dom";
 import UserProfile from "./UserPortfolio";
-import React from "react";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import React, { useState, useEffect } from "react";
 
 function Portfolio() {
+
+    const [team, setTeam] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        fetch("/team-portfolio.json") 
+            .then((response) => response.json())
+            .then((data) => setTeam(data))
+            .catch((error) => console.error("Error loading team data:", error));
+    }, []);
+
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % team.length);
+    };
+
+    const handlePrev = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + team.length) % team.length);
+    };
+
+    if (team.length === 0) return <p>Loading...</p>;
+
+    const member = team[currentIndex];
+
     return (
         <>
             <Header />
@@ -25,31 +52,46 @@ function Portfolio() {
                 </div>
 
             </section>
+            
             <section className="cards">
                 <div className="carousel">
-                    <button className="carousel-navigation prev">&#10094;</button>
+                    <button className="carousel-navigation prev" onClick={handlePrev}>&#10094;</button>
                     <div className="portfolio-card">
-                        <button className="mail"></button>
+
+                        <button className="mail">
+                            <EmailOutlinedIcon fontSize="large"/>
+                        </button>
+
                         <Link to="/UserPortfolio">
-                        <div className="profile-pic"></div></Link>
+                            <div className="profile-pic" 
+                            style={{ backgroundImage: `url(${member.image})` }}>
+
+                            </div>
+                        </Link>
+
                         <div className="bottom">
                             <div className="content">
-                                <span className="name">My Name</span>
-                                <span className="about-me">
-                                    Description
-                                </span>
-                                <span className="about-me">
-                                    Tech Stack
-                                </span>
+                                <span className="name">{member.name}</span>
+                                <span className="about-me">{member.description}</span>
+                                <span className="about-me">{member.techStack}</span>
                             </div>
                             <div className="bottom-bottom">
-                                <div className="social-links-container"></div>
+                                <div className="social-links-container">
+                                    <Link to="/">
+                                        <GitHubIcon className="social-links" fontSize="large"/>
+                                    </Link>
+
+                                    <Link to="/">
+                                        <LinkedInIcon className="social-links" fontSize="large"/>
+                                    </Link>
+                                    
+                                </div>
                                 <button className="button">Contact Me</button>
                             </div>
                         </div>
                     </div>
 
-                    <button className="carousel-navigation next">&#10095;</button>
+                    <button className="carousel-navigation next" onClick={handleNext}>&#10095;</button>
                 </div>                
             </section>
         </>

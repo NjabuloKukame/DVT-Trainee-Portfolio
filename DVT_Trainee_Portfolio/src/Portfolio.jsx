@@ -35,7 +35,7 @@ function Portfolio() {
                             <div className="content">
                                 <span className="name">My Name</span>
                                 <span className="about-me">
-                                    Lorem ipsum dolor sit amet consectetur adipisicinFcls
+                                    Lorem. ipsum. dolor sit amet consectetur adipisicinFcls
                                 </span>
                             </div>
                             <div className="bottom-bottom">

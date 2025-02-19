@@ -65,10 +65,10 @@ function UserPortfolio() {
 
                     <div className="button-section">
                         <button className="linkedin-btn">
-                            <img src={LinkedIn} alt="LinkedIn" className="linkedin-img" />
+                        <abbr title='LinkedIn Link'><img src={LinkedIn} alt="LinkedIn" className="linkedin-img" /></abbr>
                         </button>
                         <button className="github-btn">
-                            <img src={Github} alt="Github" className="github-img" />
+                        <abbr title='Github Link'><img src={Github} alt="Github" className="github-img" /></abbr>
                         </button>
                         <button className="contact-btn">
                             <abbr title='Contact'><img src={Contact} alt="Contact" className="contact-img" /></abbr>

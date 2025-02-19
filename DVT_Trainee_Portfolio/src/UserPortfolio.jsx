@@ -1,26 +1,37 @@
 import './styles.css';
 import './UserPortfolio.css';
 import ProfileImage from './assets/icons8-user-profile-100.png';
+import Github from './assets/icons8-github-100.png'
+import LinkedIn from './assets/icons8-linkedin-100.png'
+import Contact from './assets/icons8-contact-100.png'
 import Header from './components/Header';
 
-function UserPortfolio(){
-    const projects = [0,0,0,0]
-    return(
+function UserPortfolio() {
+    const projects = [0, 0, 0, 0];
+    return (
         <>
-            <Header/>
+            <Header />
             <div className="portfolio-container">
 
                 <div className="profile-header">
-                    <img src={ProfileImage} alt="Profile" className="profile-img" />
-                    <div className="user-info">
-                        <h1>John Doe</h1>
-                        <h3>Full Stack Developer</h3>
-                    </div>
+                    <div className="pop">
+                        <img src={ProfileImage} alt="Profile" className="profile-img" />
+                        <div className="user-name-section">
+                            <h1>John Doe</h1>
+                        </div>
 
+                        <div className='user-position'>
+                            <h3>Full Stack Developer</h3>
+                        </div>
+                    </div>
                     <div className="about-section">
-                        <p>I am a fullstack developer at DVT...</p>
+                        <p>I am a fullstack developer at DVT... </p>
                     </div>
                 </div>
+
+
+
+
                 <div className="technology-section">
                     <div className="technology-stack-section">
                         <ul>
@@ -34,17 +45,40 @@ function UserPortfolio(){
                             <li>React</li>
                         </ul>
                     </div>
-                    <div className="project-grid-section">
-                        {projects.map( (project) => {
-                            return (<div className='project'></div>)
-                        })}
+
+                    <div className='project-section'>
+
+                        <h2>Projects</h2>
+                        <div className="project-grid-section">
+                            {projects.map((project) => {
+                                return (<div className='project'></div>)
+                            })}
+                        </div>
+
                     </div>
+
                 </div>
-                    <div>
-                    <div className="cv-btn">
-                        <button>Download CV</button>
+                <div className="button-container">
+                    <div className="cv-button">
+                        <button className="cv-btn">Download CV</button>
                     </div>
+
+                    <div className="button-section">
+                        <button className="linkedin-btn">
+                            <img src={LinkedIn} alt="LinkedIn" className="linkedin-img" />
+                        </button>
+                        <button className="github-btn">
+                            <img src={Github} alt="Github" className="github-img" />
+                        </button>
+                        <button className="contact-btn">
+                            <abbr title='Contact'><img src={Contact} alt="Contact" className="contact-img" /></abbr>
+                        </button>
+
+                    </div>
+                    
+                    
                 </div>
+                <button className='update-btn'>Update Profile</button>
             </div>
         </>
     );

@@ -30,7 +30,8 @@ function Portfolio() {
                     <button className="carousel-navigation prev">&#10094;</button>
                     <div className="portfolio-card">
                         <button className="mail"></button>
-                        <div className="profile-pic"></div>
+                        <Link to="/UserPortfolio">
+                        <div className="profile-pic"></div></Link>
                         <div className="bottom">
                             <div className="content">
                                 <span className="name">My Name</span>

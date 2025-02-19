@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Paballo",
+        "surname": "Thobei",
+        "description": "Personality Trait.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "image": "./src/assets/user_placeholder.png"
+    },
+    
+    {
+        "name": "Phemelo",
+        "surname": "Makwatse",
+        "description": "Personality Trait.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "image": "./src/assets/user_placeholder.png"
+    },
+    
+    {
+        "name": "Gomolemo",
+        "surname": "Motlhamme",
+        "description": "Personality Trait.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "image": "./src/assets/user_placeholder.png"
+    },
+    
+    {
+        "name": "Adrian",
+        "surname": "Majavu",
+        "description": "Personality Trait.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "image": "./src/assets/user_placeholder.png"
+    },
+    
+    {
+        "name": "Njabula",
+        "surname": "Kukame",
+        "description": "Personality Trait.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "image": "./src/assets/user_placeholder.png"
+    },
+    
+    {
+        "name": "Andile",
+        "surname": "Mhlongo",
+        "description": "Personality Trait.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "image": "./src/assets/user_placeholder.png"
+    },
+    
+    {
+        "name": "Thabane",
+        "surname": "Ngobe",
+        "description": "Personality Trait.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "image": "./src/assets/user_placeholder.png"
+    },
+    
+    {
+        "name": "Remow",
+        "surname": "Rammekwa",
+        "description": "Personality Trait.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "image": "./src/assets/user_placeholder.png"
+    },
+    
+    {
+        "name": "Paballo",
+        "surname": "Thobei",
+        "description": "Personality Trait.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "image": "./src/assets/user_placeholder.png"
+    }
+    
+]

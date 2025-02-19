@@ -28,7 +28,7 @@
     margin: 1% 5% 0% 2%;
 }
 
-.card-content{
+.about-card-content{
     display: flex;
     flex-direction: column;
     gap: 15%;

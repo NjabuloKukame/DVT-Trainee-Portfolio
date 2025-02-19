@@ -1,9 +1,9 @@
-import './styles.css';
-import './Portfolio.css';
-import Header from './components/Header';
-import { Link } from 'react-router-dom';
-import UserProfile from './UserPortfolio';
-import React from 'react';
+import "./styles.css";
+import "./Portfolio.css";
+import Header from "./components/Header";
+import { Link } from "react-router-dom";
+import UserProfile from "./UserPortfolio";
+import React from "react";
 
 function Portfolio() {
     return (
@@ -15,41 +15,41 @@ function Portfolio() {
                     <i class="bi bi-search"></i>
                     <input type="text" id="searchInput" placeholder="  Search" />
                 </div>
+
+                <div className="view-filter">
+                    <select name="view-mode" id="view-mode" className="custom-dropdown">
+                        <option value="card-view">Card</option>
+                        <option value="grid-view">Grid</option>
+                        <option value="carousel-view">Carousel</option>
+                    </select>
+                </div>
+
             </section>
             <section className="cards">
                 <div className="carousel">
                     <button className="carousel-navigation prev">&#10094;</button>
-                    <div className="carousel-inner-full">
-                    <Link to="/UserPortfolio" >
-                        <div className="carousel-item-top">
-                            <img src="images/1.jpg" alt="Image 1" />
-                            <div className="carousel-caption">
-                                <p>Name <br/>
-                                    <span>Surname
-                                    Personality trait
-                                    </span>
-                                </p>
+                    <div className="portfolio-card">
+                        <button className="mail"></button>
+                        <div className="profile-pic"></div>
+                        <div className="bottom">
+                            <div className="content">
+                                <span className="name">My Name</span>
+                                <span className="about-me">
+                                    Description
+                                </span>
+                                <span className="about-me">
+                                    Tech Stack
+                                </span>
+                            </div>
+                            <div className="bottom-bottom">
+                                <div className="social-links-container"></div>
+                                <button className="button">Contact Me</button>
                             </div>
                         </div>
-                        <p id="project-Title">My Projects</p>
-                        <div className="carousel-item-middle">
-                            <div>&nbsp;</div>
-                            <div>&nbsp;</div>
-                            <div>&nbsp;</div>
-                            <div>&nbsp;</div>
-                            <div>&nbsp;</div>
-                            <div>&nbsp;</div>
-                        </div>
-                        <div className="carousel-item-bottom">
-                            <a href="#"><i className="bi bi-github"></i></a>
-                            <a href="#"><i className="bi bi-linkedin"></i></a>
-                            <a href="#"><i className="bi bi-envelope-fill"></i></a>
-                            <a href="#"><i className="bi bi-telephone"></i></a>
-                        </div>
-                        </Link>
                     </div>
+
                     <button className="carousel-navigation next">&#10095;</button>
-                </div>
+                </div>                
             </section>
         </>
     );

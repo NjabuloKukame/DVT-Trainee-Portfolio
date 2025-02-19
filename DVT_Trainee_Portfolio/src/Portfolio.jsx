@@ -28,25 +28,28 @@ function Portfolio() {
             <section className="cards">
                 <div className="carousel">
                     <button className="carousel-navigation prev">&#10094;</button>
-                    <div class="portfolio-card">
-                        <button class="mail"></button>
-                        <div class="profile-pic"></div>
-                        <div class="bottom">
-                            <div class="content">
-                                <span class="name">My Name</span>
-                                <span class="about-me">
-                                    Lorem ipsum dolor sit amet consectetur adipisicinFcls
+                    <div className="portfolio-card">
+                        <button className="mail"></button>
+                        <div className="profile-pic"></div>
+                        <div className="bottom">
+                            <div className="content">
+                                <span className="name">My Name</span>
+                                <span className="about-me">
+                                    Description
+                                </span>
+                                <span className="about-me">
+                                    Tech Stack
                                 </span>
                             </div>
-                            <div class="bottom-bottom">
-                                <div class="social-links-container"></div>
-                                <button class="button">Contact Me</button>
+                            <div className="bottom-bottom">
+                                <div className="social-links-container"></div>
+                                <button className="button">Contact Me</button>
                             </div>
                         </div>
                     </div>
 
                     <button className="carousel-navigation next">&#10095;</button>
-                </div>
+                </div>                
             </section>
         </>
     );

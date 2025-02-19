@@ -1,9 +1,9 @@
-import './styles.css';
-import './Portfolio.css';
-import Header from './components/Header';
-import { Link } from 'react-router-dom';
-import UserProfile from './UserPortfolio';
-import React from 'react';
+import "./styles.css";
+import "./Portfolio.css";
+import Header from "./components/Header";
+import { Link } from "react-router-dom";
+import UserProfile from "./UserPortfolio";
+import React from "react";
 
 function Portfolio() {
     return (
@@ -15,42 +15,36 @@ function Portfolio() {
                     <i class="bi bi-search"></i>
                     <input type="text" id="searchInput" placeholder="  Search" />
                 </div>
+
+                <div className="view-filter">
+                    <select name="view-mode" id="view-mode" className="custom-dropdown">
+                        <option value="card-view">Card</option>
+                        <option value="grid-view">Grid</option>
+                        <option value="carousel-view">Carousel</option>
+                    </select>
+                </div>
+
             </section>
             <section className="cards">
                 <div className="carousel">
                     <button className="carousel-navigation prev">&#10094;</button>
-                    <div className="carousel-inner-full">
-                    <Link to="/UserPortfolio" >
-                        <div className="carousel-item-top">
-                            <img src="images/1.jpg" alt="Image 1" />
-                            <div className="carousel-caption">
-                                <p>Name <br/>
-                                    <span>Surname
-                                    Personality trait
-                                    </span>
-                                
-                                </p>
-                                {/* <p>Surname</p>
-                                <p>Personality trait</p> */}
+                    <div class="portfolio-card">
+                        <button class="mail"></button>
+                        <div class="profile-pic"></div>
+                        <div class="bottom">
+                            <div class="content">
+                                <span class="name">My Name</span>
+                                <span class="about-me">
+                                    Lorem ipsum dolor sit amet consectetur adipisicinFcls
+                                </span>
+                            </div>
+                            <div class="bottom-bottom">
+                                <div class="social-links-container"></div>
+                                <button class="button">Contact Me</button>
                             </div>
                         </div>
-                        <p id="project-Title">My Projects</p>
-                        <div className="carousel-item-middle">
-                            <div>&nbsp;</div>
-                            <div>&nbsp;</div>
-                            <div>&nbsp;</div>
-                            <div>&nbsp;</div>
-                            <div>&nbsp;</div>
-                            <div>&nbsp;</div>
-                        </div>
-                        <div className="carousel-item-bottom">
-                            <a href="#"><i className="bi bi-github"></i></a>
-                            <a href="#"><i className="bi bi-linkedin"></i></a>
-                            <a href="#"><i className="bi bi-envelope-fill"></i></a>
-                            <a href="#"><i className="bi bi-telephone"></i></a>
-                        </div>
-                        </Link>
                     </div>
+
                     <button className="carousel-navigation next">&#10095;</button>
                 </div>
             </section>

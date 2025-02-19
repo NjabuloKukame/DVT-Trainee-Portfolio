@@ -35,7 +35,10 @@ function Portfolio() {
                             <div className="content">
                                 <span className="name">My Name</span>
                                 <span className="about-me">
-                                    Lorem. ipsum. dolor sit amet consectetur adipisicinFcls
+                                    Description
+                                </span>
+                                <span className="about-me">
+                                    Tech Stack
                                 </span>
                             </div>
                             <div className="bottom-bottom">
@@ -46,7 +49,7 @@ function Portfolio() {
                     </div>
 
                     <button className="carousel-navigation next">&#10095;</button>
-                </div>
+                </div>                
             </section>
         </>
     );

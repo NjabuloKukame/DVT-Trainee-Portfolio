@@ -28,10 +28,7 @@ function Portfolio() {
                                     <span>Surname
                                     Personality trait
                                     </span>
-                                
                                 </p>
-                                {/* <p>Surname</p>
-                                <p>Personality trait</p> */}
                             </div>
                         </div>
                         <p id="project-Title">My Projects</p>

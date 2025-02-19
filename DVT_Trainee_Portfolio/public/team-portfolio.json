@@ -6,7 +6,7 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/placeholder.png"
     },
     
     {
@@ -16,7 +16,7 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/owl.jpg"
     },
     
     {

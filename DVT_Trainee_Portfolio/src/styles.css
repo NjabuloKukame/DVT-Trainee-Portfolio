@@ -34,3 +34,22 @@ body.dark-mode {
     background: linear-gradient(-20deg, #10212b 0%, #241b34 100%);
     transition: 0.5s ease-in-out;
 }
+
+::-webkit-scrollbar{
+    width: 7px;
+    background-color: var(--blue); 
+}
+
+::-webkit-scrollbar-track{
+    margin-block: 1em;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 100px;
+    background-color: var(--white);
+    padding-top: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--dark-yellow);
+}

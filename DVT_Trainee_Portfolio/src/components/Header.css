@@ -149,7 +149,7 @@
 }
 
 .dark-mode-enabled {
-    background-color: var(--blue);
+    background-color: var(--dark-gray);
     color: var(--yellow); 
     border-radius: 20px; 
 }
@@ -226,3 +226,52 @@
   .log-out{
     margin-top: 65vh;
   }
+
+  .switch {
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    transition: 0.3s ease-in-out;
+    margin-top: 10%;
+}
+
+.toggle {
+    position: absolute;
+    width: 5rem;
+    height: 2rem;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.dark-mode-enabled .toggle {
+    transform: translateX(7.2rem);
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.names {
+    font-size: 90%;
+    font-weight: bold;
+    margin-inline: 11.5%;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.dark, .light {
+    opacity: 0.5;
+}

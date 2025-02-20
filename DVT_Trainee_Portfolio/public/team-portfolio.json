@@ -1,27 +1,27 @@
 [
     {
         "name": "Paballo Thobei",
-        "description": "Personality Trait.",
+        "description": "Personality Trait: She's a vibe.",
         "email": "Email Address",
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/placeholder.png"
     },
     
     {
         "name": "Phemelo Makwatse",
-        "description": "Personality Trait.",
+        "description": "Personality Trait: He's a vibe.",
         "email": "Email Address",
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/owl.jpg"
     },
     
     {
         "name": "Gomolemo Motlhamme",
-        "description": "Personality Trait.",
+        "description": "Personality Trait: He's a vibe.",
         "email": "Email Address",
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
@@ -31,16 +31,16 @@
     
     {
         "name": "Adrian Majavu",
-        "description": "Personality Trait.",
+        "description": "Personality Trait: He's a vibe.",
         "email": "Email Address",
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/placeholder.png"
     },
     
     {
-        "name": "Njabula Kukame",
+        "name": "Njabulo Kukame",
         "description": "Personality Trait.",
         "email": "Email Address",
         "github": "Github Username",
@@ -55,8 +55,8 @@
         "email": "Email Address",
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
-        "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "techStack": "HTML, CSS, JavaScript, PHP, Java, C++, C, Python",
+        "image": "./src/assets/placeholder.png"
     },
     
     {
@@ -76,17 +76,17 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/placeholder.png"
     },
     
     {
-        "name": "Paballo Thobei",
+        "name": "Slindokuhle Ngcobo",
         "description": "Personality Trait.",
         "email": "Email Address",
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/placeholder.png"
     }
     
 ]

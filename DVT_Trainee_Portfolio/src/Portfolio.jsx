@@ -1,18 +1,19 @@
 import "./styles.css";
 import "./Portfolio.css";
 import Header from "./components/Header";
+import CarouselView from "./components/CarouselView";
 import { Link } from "react-router-dom";
 import UserProfile from "./UserPortfolio";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import React, { useState, useEffect } from "react";
 
 function Portfolio() {
-
+    // Populate The Team Cards
     const [team, setTeam] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isCarouselView, setIsCarouselView] = useState(false); // Only for carousel
 
     useEffect(() => {
         fetch("/team-portfolio.json") 
@@ -33,67 +34,73 @@ function Portfolio() {
 
     const member = team[currentIndex];
 
+    // Handle view change
+    const handleViewChange = (event) => {
+        setIsCarouselView(event.target.value === "carousel-view");
+    };
+
     return (
         <>
             <Header />
             <section className="Intro">
                 <p className="theTitle">Portfolio</p>
                 <div className="search">
-                    <i class="bi bi-search"></i>
+                    <i className="bi bi-search"></i>
                     <input type="text" id="searchInput" placeholder="  Search" />
                 </div>
 
                 <div className="view-filter">
-                    <select name="view-mode" id="view-mode" className="custom-dropdown">
+                    <select name="view-mode" id="view-mode" className="custom-dropdown" onChange={handleViewChange}>
                         <option value="card-view">Card</option>
                         <option value="grid-view">Grid</option>
                         <option value="carousel-view">Carousel</option>
                     </select>
                 </div>
-
             </section>
-            
-            <section className="cards">
-                <div className="carousel">
-                    <button className="carousel-navigation prev" onClick={handlePrev}>&#10094;</button>
-                    <div className="portfolio-card">
 
-                        <button className="mail">
-                            <EmailOutlinedIcon fontSize="large"/>
-                        </button>
+            {/* Render CarouselView when carousel is selected */}
+            {isCarouselView ? (
+                <CarouselView />
+            ) : (
+                <section className="cards">
+                    <div className="carousel">
+                        <button className="carousel-navigation prev" onClick={handlePrev}>&#10094;</button>
+                        <div className="portfolio-card">
+                            <button className="mail">
+                                <EmailOutlinedIcon fontSize="large"/>
+                            </button>
 
-                        <Link to="/UserPortfolio">
-                            <div className="profile-pic" 
-                            style={{ backgroundImage: `url(${member.image})` }}>
-
-                            </div>
-                        </Link>
-
-                        <div className="bottom">
-                            <div className="content">
-                                <span className="name">{member.name}</span>
-                                <span className="about-me">{member.description}</span>
-                                <span className="about-me">{member.techStack}</span>
-                            </div>
-                            <div className="bottom-bottom">
-                                <div className="social-links-container">
-                                    <Link to="/">
-                                        <GitHubIcon className="social-links" fontSize="large"/>
-                                    </Link>
-
-                                    <Link to="/">
-                                        <LinkedInIcon className="social-links" fontSize="large"/>
-                                    </Link>
-                                    
+                            <Link to="/UserPortfolio">
+                                <div className="profile-pic" 
+                                style={{ backgroundImage: `url(${member.image})` }}>
                                 </div>
-                                <button className="button">Contact Me</button>
+                            </Link>
+
+                            <div className="bottom">
+                                <div className="content">
+                                    <span className="name">{member.name}</span>
+                                    <span className="about-me">{member.description}</span>
+                                    <span className="about-me">{member.techStack}</span>
+                                </div>
+                                <div className="bottom-bottom">
+                                    <div className="social-links-container">
+                                        <Link to="/">
+                                            <GitHubIcon className="social-links" fontSize="large"/>
+                                        </Link>
+
+                                        <Link to="/">
+                                            <LinkedInIcon className="social-links" fontSize="large"/>
+                                        </Link>
+                                        
+                                    </div>
+                                    <button className="button">Contact Me</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <button className="carousel-navigation next" onClick={handleNext}>&#10095;</button>
-                </div>                
-            </section>
+                        <button className="carousel-navigation next" onClick={handleNext}>&#10095;</button>
+                    </div>                
+                </section>
+            )}
         </>
     );
 }

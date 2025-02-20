@@ -36,7 +36,7 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/placeholder.png"
     },
     
     {
@@ -55,8 +55,8 @@
         "email": "Email Address",
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
-        "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "techStack": "HTML, CSS, JavaScript, PHP, Java, C++, C, Python",
+        "image": "./src/assets/placeholder.png"
     },
     
     {
@@ -76,17 +76,17 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/placeholder.png"
     },
     
     {
-        "name": "Paballo Thobei",
+        "name": "Slindokuhle Ngcobo",
         "description": "Personality Trait.",
         "email": "Email Address",
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/placeholder.png"
     }
     
 ]

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './styles.css'
 import Home from './Home.jsx'
 import About from './About.jsx';
-import Login from './Login.jsx';
+import Login from './Login.jsx'
 import Portfolio from './Portfolio.jsx';
 import UserPortfolio from './UserPortfolio.jsx';
 import SearchBar from './components/SearchBar.jsx';

@@ -42,9 +42,11 @@
   }
   
   .carousel-card {
-    position: absolute;
-    background:  rgba(var(--color-card));
-    box-shadow: inset 0 0 40px 0px rgba(0, 0, 0, 0.5);
+    position: absolute;   
+    /* border-color: var(--gray); */
+    
+    background:  rgba(var(--color-card),0.5);
+    box-shadow: inset 0 0 60px 20px rgb(0, 0, 0, 0.1);
     transform-style: preserve-3d;
     border-radius: 12px;
     overflow: hidden;
@@ -55,7 +57,13 @@
     background-position: center;
     height: 250px;
     width: 200px;
-    
+    border: 2px var(--gray) solid;
+  }
+
+  .carousel-card:hover {
+    background:  rgba(var(--color-card));
+    -webkit-box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
+    box-shadow: 10px 5px 18px 0 rgba(255, 255, 255, 0.877);
   }
 
   .carousel-img{
@@ -63,6 +71,7 @@
     width: 50px;
     border-radius: 25px;
     margin-top: 10px;
+    border: 2px var(--white) solid;
   }
 
   .carousel-content p{

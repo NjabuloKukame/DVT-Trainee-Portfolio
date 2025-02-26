@@ -6,7 +6,7 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/placeholder.png"
+        "image": "./src/assets/Pabs.jpg"
     },
     
     {
@@ -26,7 +26,7 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/Gomo.jpg"
     },
     
     {
@@ -36,7 +36,7 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/placeholder.png"
+        "image": "./src/assets/Adriano.jpg"
     },
     
     {
@@ -46,7 +46,7 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/Njabs.jpg"
     },
     
     {
@@ -56,7 +56,7 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript, PHP, Java, C++, C, Python",
-        "image": "./src/assets/placeholder.png"
+        "image": "./src/assets/Andile.jpg"
     },
     
     {
@@ -66,7 +66,7 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/user_placeholder.png"
+        "image": "./src/assets/Thabane.jpg"
     },
     
     {
@@ -76,7 +76,7 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/placeholder.png"
+        "image": "./src/assets/Remow.jpg"
     },
     
     {
@@ -86,7 +86,7 @@
         "github": "Github Username",
         "linkedin": "LinkedIn Profile Link",
         "techStack": "HTML, CSS, JavaScript",
-        "image": "./src/assets/placeholder.png"
+        "image": "./src/assets/Sli.jpg"
     }
     
 ]

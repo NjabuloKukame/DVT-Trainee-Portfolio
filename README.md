@@ -23,7 +23,7 @@
 - if you encounter any issues later on, try running "npm update"
 
 ### Features
-- Multiple View Modes – Users can switch between Card View, Grid View, and Carousel View for browsing team portfolios.
+- *Multiple View Modes* – Users can switch between Card View, Grid View, and Carousel View for browsing team portfolios.
 - Dynamic Team Profiles – Each portfolio card dynamically loads team member details from a JSON file.
 - Hover Effects – When hovering over a profile, the image fades, and additional details appear smoothly.
 - Animated Grid Interaction – In Grid View, hovering over one card scales it up while blurring the others.

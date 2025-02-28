@@ -1,0 +1,104 @@
+.team-pictures{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.team-pictures h1{
+    font-size: 55px;
+    border-bottom: 2px solid var(--yellow);
+}
+
+.big-picture{
+    width: 980px;
+    height: 500px;
+    border-radius: 20px;
+    margin: 25px;
+}
+
+.small-picture{
+    width: 480px;
+    height: 300px;
+    border-radius: 20px;
+    margin: 15px;
+}
+
+.team-pictures h2{
+    font-size: 45px;
+    border-bottom: 2px solid var(--yellow);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.meet-the-team{
+    display: flex;
+    margin-right: calc(20% - 50px);
+    margin-top: 3%;
+    width: 50%;
+}
+
+.meet-the-team:nth-of-type(2n):not(:first-of-type){
+    flex-direction: row-reverse;
+    margin-left: calc(40% - 50px);
+    text-align: right;
+}
+
+.team-members p{
+    display: flex;
+    flex-direction: column;
+    margin-top: 13%;
+}
+
+.team-members{
+    gap: 2px;  
+}
+
+.team-members h3{
+    font-size: 35px;
+    border-top: 2px solid var(--white);
+    margin-top: 10px;
+}
+
+.team-members p:nth-of-type(2n):not(:first-of-type){
+    color: var(--yellow);
+}
+
+.team-info .team-info-text, .about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 4.5%;
+
+}
+.team-info-text h1, .about-us h1{
+    font-size: 55px;
+    border-bottom: 2px solid var(--yellow);
+    margin-bottom: 4.5%;
+}
+
+.team-info-text p{
+    font-size: 27px;
+    margin-top: 10px;
+    text-wrap: wrap;
+    text-align: center;
+    margin-inline: 10%;
+    line-height: 1.2;
+    margin-bottom: 2%;
+}
+
+.about-us h1{
+    text-align: center;
+    margin-bottom: 20%;
+}
+
+.about-us, .people-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    gap: 15px;
+    
+    margin-left: 32%;
+  }
+
+  .content{
+    justify-content: center;
+    text-align: center;
+    height: 83.7vh;
+  }
+  
+  #theTitle {
+    flex-wrap: nowrap;
+    width: 56rem;
+    font-size: 64px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #FFE500;
+    line-height: 85px;
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    margin-top: 50px;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+  
+  .cta-button {
+    font-size: 28px;
+    width: 197px;
+    height: 63px;
+    padding: 21px 30px;
+    background: #FFE500;
+    color: black;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 50px ;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .cta-button:hover {
+    background-color: #b8a603;
+  }
+  

@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Paballo Thobei",
+        "description": "Personality Trait: She's a vibe.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "techStack": "HTML, CSS, JavaScript",
+        "image": "./src/assets/Pabs.jpg"
+    },
+    
+    {
+        "name": "Phemelo Makwatse",
+        "description": "Personality Trait: He's a vibe.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "techStack": "HTML, CSS, JavaScript",
+        "image": "./src/assets/owl.jpg"
+    },
+    
+    {
+        "name": "Gomolemo Motlhamme",
+        "description": "Personality Trait: He's a vibe.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "techStack": "HTML, CSS, JavaScript",
+        "image": "./src/assets/Gomo.jpg"
+    },
+    
+    {
+        "name": "Adrian Majavu",
+        "description": "Personality Trait: He's a vibe.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "techStack": "HTML, CSS, JavaScript",
+        "image": "./src/assets/Adriano.jpg"
+    },
+    
+    {
+        "name": "Njabulo Kukame",
+        "description": "Personality Trait: He's a vibe.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "techStack": "HTML, CSS, JavaScript",
+        "image": "./src/assets/Njabs.jpg"
+    },
+    
+    {
+        "name": "Andile Mhlongo",
+        "description": "Personality Trait: He's a vibe.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "techStack": "HTML, CSS, JavaScript, PHP, Java, C++, C, Python",
+        "image": "./src/assets/Andile.jpg"
+    },
+    
+    {
+        "name": "Thabane Ngobe",
+        "description": "Personality Trait: He's a vibe.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "techStack": "HTML, CSS, JavaScript",
+        "image": "./src/assets/Thabane.jpg"
+    },
+    
+    {
+        "name": "Remow Rammekwa",
+        "description": "Personality Trait: She's a vibe.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "techStack": "HTML, CSS, JavaScript",
+        "image": "./src/assets/Remow.jpg"
+    },
+    
+    {
+        "name": "Slindokuhle Ngcobo",
+        "description": "Personality Trait: He's a vibe.",
+        "email": "Email Address",
+        "github": "Github Username",
+        "linkedin": "LinkedIn Profile Link",
+        "techStack": "HTML, CSS, JavaScript",
+        "image": "./src/assets/Sli.jpg"
+    }
+    
+]

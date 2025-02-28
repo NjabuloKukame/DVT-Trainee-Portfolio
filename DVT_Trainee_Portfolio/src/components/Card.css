@@ -1,0 +1,55 @@
+/* Card container */
+.card {
+    display: flex;
+    background: #0D258C; /* Dark blue background */
+    border: 2px solid yellow; /* Yellow border */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    height: max-content;
+    max-width: 1000px;
+    margin-bottom: 20px;
+    text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+/* Hover effect */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 1% 5% 0% 2%;
+}
+
+.about-card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+}
+
+/* Name styling */
+.name {
+    font-size: 27px;
+    border-bottom: 3px solid var(--yellow);
+    width: max-content;
+    margin-bottom: 0.5%;
+}
+
+/* Description text */
+.description {
+    color: var(--yellow);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+    }
+}

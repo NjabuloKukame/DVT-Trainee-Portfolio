@@ -1,0 +1,155 @@
+/* Container for the user profile information */
+.layout-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-height: 1000px;
+  width: 100%;
+  margin-block: 2rem;
+  border-radius: 1.5rem;
+  margin-left: 25%;
+}
+
+/* .dark-mode .layout-body{
+  background: linear-gradient(0deg, #052B4C 0%, #052B4C 100%);
+  color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+} */
+
+
+
+.portfolio-layout{
+    display: flex;
+    flex-direction: row; 
+    margin-left: 10%;
+    margin-block: 2rem;
+}
+  
+  
+  /* Main Content Styles */
+
+
+  .project-container {
+    background: linear-gradient(to bottom, #f3f4f6, #e5e7eb);
+    border-radius: 12px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    min-height: 880px;
+    width: 1030px;
+    padding: 30px;
+}
+
+.dark-mode .project-container {
+    background: linear-gradient(180deg, #04223D 0%, #02111E 100%);
+    color: var(--dark-mode-paragragh-white);
+}
+  
+  .main-content {
+    width: 50%;
+    margin-left: 30%;
+    margin-top: 10px;
+    padding: 20px;
+    border-top: var(--light-blue) 0.5px solid;
+  }
+  
+  .dark-mode .main-content{
+    border-top: var(--dark-mode-paragragh-white) 0.5px solid;
+
+  }
+
+  .main-content h2{
+    color: var(--light-blue);
+    font-size: larger;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .dark-mode .main-content h2{
+    color: var(--dark-mode-paragragh-white);
+  }
+
+.about-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-header h2{
+    color: var(--light-blue);
+    font-size: larger;
+    align-items: center;
+    text-align: center;
+  }
+  .dark-mode .about-header h2{
+    color: var(--dark-mode-paragragh-white);
+}
+  .about-section{
+    word-spacing: 1px;
+    line-height: 1.5;
+    width: 80%;
+    margin-left: 90px;
+    padding: 10px;
+    background-color: var(--white);
+    color: var(--userText-grayText);
+    border-radius: 1rem;
+    margin-top: 10px;
+  }
+  .dark-mode .about-section{
+    background: linear-gradient(0deg, #052B4C 0%, #052B4C 100%);
+    color: var(--dark-mode-paragragh-white);
+  }
+  
+  .testimonial-section {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    height: 150px;
+    width: 250px;
+    margin-left: 290px;
+    margin-top: 65px;
+    margin-bottom: 30px;
+  }
+
+  
+  /* Grid Content */
+  .grid-content {
+    margin-top: 30px;
+    margin-right: 60px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    height: 60%;
+    width: 100%;
+  }
+  
+  .grid-item {
+    width: 100%;
+    height: 60px; 
+    background-color: #a0aec0;
+    border-radius: 16px;
+}
+
+/* Custom loader for UserPortfolio in dark mode */
+.dark-mode .layout-body .form-loader {
+  background: 
+    radial-gradient(farthest-side, #ffffff 94%, #0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, #ffffff);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 5px), #000 0);
+  mask: radial-gradient(farthest-side, #0000 calc(100% - 5px), #000 0);
+}
+  
+
+
+.css-7ybkvk-MuiPaper-root-MuiAppBar-root{
+  background-color: var(--dark-blue);
+}
+
+.css-s1hpy6-MuiList-root{
+
+  background-color: var(--dark-gray);
+}

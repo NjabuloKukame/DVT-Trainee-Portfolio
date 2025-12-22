@@ -1,0 +1,67 @@
+/* Custom MUI Switch styling */
+.MuiSwitch-track {
+  transition: all 0.5s ease !important;
+
+}
+
+*/ .MuiSwitch-thumb {
+  transition: all 0.5s ease !important;
+}
+
+
+.MuiSwitch-switchBase {
+  transition: all 0.5s ease !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked+.MuiSwitch-track {
+  background: linear-gradient(180deg, #0895FF, #37D5FF) !important;
+  opacity: 1 !important;
+}
+
+.MuiSwitch-switchBase.Mui-checked .MuiSwitch-thumb {
+  background: white !important;
+}
+
+.MuiSwitch-switchBase:not(.Mui-checked)+.MuiSwitch-track {
+  transition: all 0.5s ease !important;
+}
+
+/* Custom toggle layout with labels on both sides */
+.sort-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--userText-grayText);
+  transition: color 0.3s ease;
+}
+
+.dark-mode .toggle-label {
+  color: var(--dark-mode-paragragh-white);
+}
+
+.sort-container .toggle-wrapper .toggle-label.active {
+  background: linear-gradient(90deg, #298bcc, #072549);
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+
+  font-weight: 600;
+}
+
+
+.dark-mode .sort-container .toggle-wrapper .toggle-label.active {
+  background-color: #37D5FF !important;
+}
